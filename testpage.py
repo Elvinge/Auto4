@@ -87,7 +87,7 @@ class OperationsHelper(BasePage):
     def add_contact_content(self, string):
         self.enter_text_into_field(ids["LOCATOR_CONTACT_CONTENT"], string, description="contact_content")
 
-# GET TEXT
+
     def new_post_title(self):
         return self.get_text_from_element(ids["LOCATOR_FIND_NEW_POST"], description="new_post_title")
 
@@ -101,10 +101,10 @@ class OperationsHelper(BasePage):
         time.sleep(2)
         logging.info("Get alert message")
         txt = self.get_alert_text()
-        logging.debug(f"Alert message is {txt}")
+        logging.debug(f"Alert message - {txt}")
         return txt
 
-# CLICK
+
     def click_save_button(self):
         self.click_button(ids["LOCATOR_SAVE_BTN"], description="save")
 
